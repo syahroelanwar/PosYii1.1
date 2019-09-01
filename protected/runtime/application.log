@@ -1,0 +1,1738 @@
+2018/11/28 06:23:38 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=gii
+---
+2018/11/28 06:35:47 [error] [exception.CException] CException: Property "User.idUser" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('idUser')
+#1 C:\xampp\htdocs\pos_yii\protected\components\UserIdentity.php(21): CActiveRecord->__get('idUser')
+#2 C:\xampp\htdocs\pos_yii\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/pos_yii/index.php?r=site/login
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/login
+---
+2018/11/28 06:36:48 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/delete&id=0
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/view&id=0
+---
+2018/11/28 06:37:08 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php:153
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(55): UserController->loadModel('0')
+#1 [internal function]: UserController->actionView('0')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/view&id=0
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user
+---
+2018/11/28 06:37:19 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/create
+---
+2018/11/28 06:37:28 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/11/28 06:37:54 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/11/28 06:39:52 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "admin". in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user
+---
+2018/11/28 06:41:47 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user
+---
+2018/11/28 06:41:53 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user
+---
+2018/11/28 07:09:49 [error] [php] mkdir(): File exists (C:\xampp\htdocs\yii\framework\utils\CFileHelper.php:363)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CAssetManager.php(250): copyDirectory()
+#1 C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php(306): CAssetManager->publish()
+#2 C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php(50): Bootstrap->getAssetsUrl()
+#3 C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php(81): Bootstrap->registerCoreCss()
+#4 C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php(9): Bootstrap->registerAllCss()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#9 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): CContentDecorator->run()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): SiteController->endWidget()
+#12 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): SiteController->endContent()
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#14 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(787): SiteController->renderFile()
+#16 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): SiteController->render()
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php
+in C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php (306)
+in C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php (50)
+in C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\components\Bootstrap.php (81)
+2018/11/28 07:19:39 [error] [exception.ParseError] ParseError: syntax error, unexpected ':', expecting ',' or ';' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:31
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php
+---
+2018/11/28 07:19:52 [error] [exception.ParseError] ParseError: syntax error, unexpected ':', expecting ',' or ';' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:31
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php
+---
+2018/11/28 07:19:54 [error] [exception.ParseError] ParseError: syntax error, unexpected ':', expecting ',' or ';' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:31
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php
+---
+2018/11/28 07:23:23 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ';' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:32
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php
+---
+2018/11/28 07:23:24 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ';' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:32
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php
+---
+2018/11/29 01:21:07 [error] [exception.CException] CException: The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional. in C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php:413
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('table table-str...')
+#1 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\pos_yii\protected\views\user\admin.php(40): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/11/29 01:21:32 [error] [exception.CException] CException: The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional. in C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php:413
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('table table-str...')
+#1 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\pos_yii\protected\views\user\admin.php(40): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/11/29 01:22:21 [error] [exception.CException] CException: Property "CGridView.itemCssClass" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('itemCssClass', 'table table-str...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CGridView', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\user\admin.php(52): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/11/29 01:30:11 [error] [exception.CException] CException: Alias "zii.widgets.grid.TbGridView" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\xampp\htdocs\yii\framework\YiiBase.php:330
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('zii.widgets.gri...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'zii.widgets.gri...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\user\admin.php(52): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#8 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/12/01 05:13:23 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\pos_yii\protected\views\user\admin.php:40)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): UserController->renderPartial()
+#2 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+in C:\xampp\htdocs\pos_yii\protected\views\user\admin.php (40)
+in C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php (138)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/01 05:13:31 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\pos_yii\protected\views\user\admin.php:40)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): UserController->renderPartial()
+#2 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+in C:\xampp\htdocs\pos_yii\protected\views\user\admin.php (40)
+in C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php (138)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/01 05:13:35 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\pos_yii\protected\views\user\admin.php:40)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): UserController->renderPartial()
+#2 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+in C:\xampp\htdocs\pos_yii\protected\views\user\admin.php (40)
+in C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php (138)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/01 06:17:47 [error] [php] include(TbActiveForm.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\YiiBase.php(310): class_exists()
+#2 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): import()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(198): UserController->createWidget()
+#5 C:\xampp\htdocs\pos_yii\protected\views\user\_form.php(10): UserController->beginWidget()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(872): UserController->renderFile()
+#9 C:\xampp\htdocs\pos_yii\protected\views\user\create.php(18): UserController->renderPartial()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(872): UserController->renderFile()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(785): UserController->renderPartial()
+#14 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(76): UserController->render()
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=user/create
+in C:\xampp\htdocs\pos_yii\protected\views\user\_form.php (10)
+in C:\xampp\htdocs\pos_yii\protected\views\user\create.php (18)
+in C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php (76)
+2018/12/01 06:36:00 [error] [exception.ParseError] ParseError: syntax error, unexpected ''visible'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:33
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/pos_yii/index.php?r=site/index
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/page&view=about
+---
+2018/12/01 08:02:37 [error] [exception.ParseError] ParseError: syntax error, unexpected '...' (T_ELLIPSIS) in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/01 08:03:25 [error] [exception.ParseError] ParseError: syntax error, unexpected '...' (T_ELLIPSIS) in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:39
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/01 08:03:41 [error] [exception.ParseError] ParseError: syntax error, unexpected '...' (T_ELLIPSIS) in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:39
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/01 08:03:42 [error] [exception.ParseError] ParseError: syntax error, unexpected '...' (T_ELLIPSIS) in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:39
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/01 08:04:41 [error] [exception.ParseError] ParseError: syntax error, unexpected '...' (T_ELLIPSIS) in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:42
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/01 08:44:13 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "karyawan/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('karyawan/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=karyawan/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=supplier/admin
+---
+2018/12/01 08:45:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "karyawan/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('karyawan/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=karyawan/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=supplier/admin
+---
+2018/12/01 08:48:48 [error] [exception.CException] CException: Alias "bootsrap.widgets.TbActiveForm" is invalid. Make sure it points to an existing directory or file. in C:\xampp\htdocs\yii\framework\YiiBase.php:355
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('bootsrap.widget...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(PegawaiController), 'bootsrap.widget...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(198): CBaseController->createWidget('bootsrap.widget...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\pegawai\_search.php(11): CBaseController->beginWidget('bootsrap.widget...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\views\pegawai\admin.php(39): CController->renderPartial('_search', Array)
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#12 C:\xampp\htdocs\pos_yii\protected\controllers\PegawaiController.php(142): CController->render('admin', Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PegawaiController->actionAdmin()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('pegawai/admin')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/pos_yii/index.php?r=pegawai/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php
+---
+2018/12/01 09:12:30 [error] [exception.CException] CException: Alias "booster.widgets.TbMenu" is invalid. Make sure it points to an existing directory or file. in C:\xampp\htdocs\yii\framework\YiiBase.php:355
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SupplierController), 'booster.widgets...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(13): CBaseController->widget('booster.widgets...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\SupplierController.php(142): CController->render('admin', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SupplierController->actionAdmin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('supplier/admin')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=supplier/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=pegawai/admin
+---
+2018/12/01 09:13:50 [error] [exception.CException] CException: Alias "booster.widgets.TbMenu" is invalid. Make sure it points to an existing directory or file. in C:\xampp\htdocs\yii\framework\YiiBase.php:355
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('booster.widgets...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(JenisBarangController), 'booster.widgets...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('booster.widgets...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(13): CBaseController->widget('booster.widgets...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\JenisBarangController.php(142): CController->render('admin', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JenisBarangController->actionAdmin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('jenisBarang/adm...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=jenisBarang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/01 09:17:02 [error] [exception.CException] CException: Property "UserController.pageCaption" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(4): CComponent->__get('pageCaption')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(123): CController->render('index', Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/index
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/admin
+---
+2018/12/01 09:18:41 [error] [exception.CException] CException: Alias "bootstrap.widgets.TbPortlet" is invalid. Make sure it points to an existing PHP file and the file is readable. in C:\xampp\htdocs\yii\framework\YiiBase.php:330
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'bootstrap.widge...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(198): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(12): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(76): CController->render('create', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/index
+---
+2018/12/01 09:31:20 [error] [exception.ParseError] ParseError: syntax error, unexpected ')' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:50
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=jenisBarang/admin
+---
+2018/12/01 09:55:00 [error] [exception.ParseError] ParseError: syntax error, unexpected 'i' (T_STRING), expecting ')' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:41
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('\t<div class="co...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('\t<div class="co...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/01 09:55:53 [error] [exception.CException] CException: Property "TbMenu.0" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'TbMenu', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\widgets\TbNavbar.php(155): CBaseController->widget('bootstrap.widge...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbNavbar->run()
+#5 C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php(45): CBaseController->widget('bootstrap.widge...', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('\t<div class="co...')
+#10 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('\t<div class="co...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#13 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(6): CBaseController->endContent()
+#14 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#18 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#28 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#29 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/01 09:56:27 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ')' in C:\xampp\htdocs\pos_yii\protected\views\layouts\main.php:42
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('\t<div class="co...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('\t<div class="co...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\pos_yii\protected\views\layouts\column2.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\pos_yii\protected\controllers\UserController.php(138): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/pos_yii/index.php?r=user/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/05 16:16:10 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/05 16:17:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/05 16:17:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=site/index
+---
+2018/12/05 16:20:45 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=jenisBarang/admin
+---
+2018/12/05 16:42:23 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2760): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2483): resolveValue()
+#9 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): activeInputField()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(104): activeTextField()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(253): TbDataColumn->getFilterCellContent()
+#12 C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\widgets\TbDataColumn.php(53): TbDataColumn->renderFilterCellContent()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(539): TbDataColumn->renderFilterCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(517): TbGridView->renderFilter()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(487): TbGridView->renderTableHeader()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\extensions\bootstrap\widgets\TbDataColumn.php (53)
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+2018/12/05 17:08:16 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(53): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\base\CComponent.php(624): BarangController->{closure}()
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): TbDataColumn->evaluateExpression()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): TbDataColumn->getDataCellContent()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): TbDataColumn->renderDataCellContent()
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): TbDataColumn->renderDataCell()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): TbGridView->renderDataCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): TbGridView->renderTableRow()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): TbGridView->renderTableBody()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (53)
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+2018/12/05 17:08:49 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(53): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\base\CComponent.php(624): BarangController->{closure}()
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): TbDataColumn->evaluateExpression()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): TbDataColumn->getDataCellContent()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): TbDataColumn->renderDataCellContent()
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): TbDataColumn->renderDataCell()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): TbGridView->renderDataCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): TbGridView->renderTableRow()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): TbGridView->renderTableBody()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (53)
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+2018/12/05 17:08:49 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(53): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\base\CComponent.php(624): BarangController->{closure}()
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): TbDataColumn->evaluateExpression()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): TbDataColumn->getDataCellContent()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): TbDataColumn->renderDataCellContent()
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): TbDataColumn->renderDataCell()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): TbGridView->renderDataCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): TbGridView->renderTableRow()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): TbGridView->renderTableBody()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (53)
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+2018/12/05 17:10:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/05 17:28:15 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\yii\framework\base\CComponent.php(614) : eval()'d code(1): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\base\CComponent.php(614): eval()
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): TbDataColumn->evaluateExpression()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): TbDataColumn->getDataCellContent()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): TbDataColumn->renderDataCellContent()
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): TbDataColumn->renderDataCell()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): TbGridView->renderDataCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): TbGridView->renderTableRow()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): TbGridView->renderTableBody()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/05 17:28:20 [error] [php] include(jenis_barang.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(282): Barang->getActiveFinder()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): Barang->getRelated()
+#7 C:\xampp\htdocs\yii\framework\base\CComponent.php(614) : eval()'d code(1): Barang->__get()
+#8 C:\xampp\htdocs\yii\framework\base\CComponent.php(614): eval()
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): TbDataColumn->evaluateExpression()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): TbDataColumn->getDataCellContent()
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): TbDataColumn->renderDataCellContent()
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): TbDataColumn->renderDataCell()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): TbGridView->renderDataCell()
+#14 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): TbGridView->renderTableRow()
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): TbGridView->renderTableBody()
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): TbGridView->renderItems()
+#17 unknown(0): TbGridView->renderSection()
+#18 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#19 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): TbGridView->renderContent()
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): TbGridView->run()
+#21 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): BarangController->widget()
+#22 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#23 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): BarangController->renderInternal()
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#26 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#27 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#29 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#30 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#31 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#32 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#33 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#34 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#35 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#36 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#37 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#38 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#39 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (35)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/05 17:39:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=supplier/create
+---
+2018/12/05 17:51:09 [error] [php] Undefined variable: r (C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): BarangController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): BarangController->renderPartial()
+#2 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): BarangController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+in C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php (34)
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (142)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/07 16:01:55 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/admin
+---
+2018/12/07 16:19:29 [error] [exception.CException] CException: Property "Barang.jenis_barang" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('jenis_barang')
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(614) : eval()'d code(1): CActiveRecord->__get('jenis_barang')
+#2 C:\xampp\htdocs\yii\framework\base\CComponent.php(614): eval()
+#3 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(142): CComponent->evaluateExpression('CHtml::encode($...', Array)
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#5 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Barang))
+#6 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(639): CGridColumn->renderDataCell(0)
+#7 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(623): CGridView->renderDataCell(Object(TbDataColumn), 0)
+#8 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(579): CGridView->renderTableRow(0)
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(489): CGridView->renderTableBody()
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\\w+)}/', Array, '{items}{pager}')
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 C:\xampp\htdocs\yii\framework\web\CBaseController.php(182): CBaseListView->run()
+#15 C:\xampp\htdocs\pos_yii\protected\views\barang\admin.php(35): CBaseController->widget('bootstrap.widge...', Array)
+#16 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#20 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(142): CController->render('admin', Array)
+#21 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionAdmin()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#29 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/admin')
+#32 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#33 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=supplier/admin
+---
+2018/12/07 17:24:11 [error] [php] include(CUploadFile.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(73): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionCreate()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/create
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (73)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/07 17:25:10 [error] [php] include(CUploadFile.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(73): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): BarangController->actionCreate()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): BarangController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): BarangController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): BarangController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): BarangController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=barang/create
+in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php (73)
+in C:\xampp\htdocs\pos_yii\index.php (13)
+2018/12/07 17:28:15 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/create
+---
+2018/12/07 17:28:24 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/create
+---
+2018/12/07 17:29:49 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/create
+---
+2018/12/07 17:32:43 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+---
+2018/12/07 17:33:49 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+---
+2018/12/07 17:33:59 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/create
+---
+2018/12/07 17:34:53 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php:165
+Stack trace:
+#0 C:\xampp\htdocs\pos_yii\protected\controllers\BarangController.php(55): BarangController->loadModel('')
+#1 [internal function]: BarangController->actionView('')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(BarangController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BarangController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/view')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/pos_yii/index.php?r=barang/view&id=
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/create
+---
+2018/12/08 06:53:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/create". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/creat...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=transaksi/admin
+---
+2018/12/08 06:53:33 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/08 06:53:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=barang/admin
+---
+2018/12/08 06:54:14 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php
+---
+2018/12/08 06:56:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php
+---
+2018/12/08 07:00:03 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "transaksi/admin". in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transaksi/admin')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos_yii/index.php?r=transaksi/admin
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=user/admin
+---
+2018/12/08 12:10:35 [error] [exception.ParseError] ParseError: syntax error, unexpected 'hitungTotalBarang' (T_STRING), expecting '(' in C:\xampp\htdocs\pos_yii\protected\views\transJual\_form.php:19
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\pos_yii\protected\views\transJual\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\TransJualController.php(78): CController->render('create', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TransJualController->actionCreate()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transJual/creat...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=transJual/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=transJual/admin
+---
+2018/12/08 12:46:35 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ',' or ')' in C:\xampp\htdocs\pos_yii\protected\views\transJual\_form.php:77
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\pos_yii\protected\views\transJual\create.php(14): CController->renderPartial('_form', Array)
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\TransJualController.php(78): CController->render('create', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TransJualController->actionCreate()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transJual/creat...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=transJual/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=transJual/admin
+---
+2018/12/08 12:46:38 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ',' or ')' in C:\xampp\htdocs\pos_yii\protected\views\transJual\_form.php:77
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\pos_yii\protected\views\transJual\create.php(14): CController->renderPartial('_form', Array)
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\xampp\htdocs\pos_yii\protected\controllers\TransJualController.php(78): CController->render('create', Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TransJualController->actionCreate()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('transJual/creat...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\pos_yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/pos_yii/index.php?r=transJual/create
+HTTP_REFERER=http://localhost/pos_yii/index.php?r=transJual/admin
+---
+2018/12/27 15:04:27 [error] [php] Undefined variable: model2 (C:\xampp\htdocs\pos_yii\protected\views\transJual\_form.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): TransJualController->renderFile()
+#1 C:\xampp\htdocs\pos_yii\protected\views\transJual\create.php(14): TransJualController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): TransJualController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): TransJualController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): TransJualController->renderPartial()
+#6 C:\xampp\htdocs\pos_yii\protected\controllers\TransJualController.php(82): TransJualController->render()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TransJualController->actionCreate()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): TransJualController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): TransJualController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): TransJualController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): TransJualController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\pos_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos_yii/index.php?r=transJual/create
+in C:\xampp\htdocs\pos_yii\protected\views\transJual\_form.php (108)
+in C:\xampp\htdocs\pos_yii\protected\views\transJual\create.php (14)
+in C:\xampp\htdocs\pos_yii\protected\controllers\TransJualController.php (82)
